@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JTS GARAGE | Order Online</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .fade-in-scale {
+      animation: fadeInScale 0.8s ease-out forwards;
+    }
+    .form-input {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: white;
+      transition: all 0.3s ease;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: #38bdf8;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+    }
+    ::placeholder { color: #6b7280; }
+  </style>
+</head>
+<body class="relative min-h-screen bg-gray-900 flex flex-col items-center justify-start overflow-x-hidden">
+
+  <img src="peakpx.jpg" class="absolute inset-0 w-full h-full object-cover z-0" alt="Background" />
+  <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+  <header class="absolute top-0 w-full z-20 backdrop-blur-md bg-transparent border-b border-white/10">
+    <div class="mx-auto flex items-center justify-between py-4 px-6 max-w-7xl">
+      <a href="index.html" class="text-2xl font-black text-white tracking-tighter">JTS GARAGE</a>
+      <div class="sm:hidden">
+        <button id="menu-toggle" class="font-bold text-white focus:outline-none px-3 py-1 border border-white rounded">Menu</button>
+      </div>
+      <nav id="menu" class="hidden sm:flex">
+        <ul class="flex flex-col gap-y-4 sm:flex-row sm:gap-x-8">
+          <li><a href="index.html" class="text-xs font-bold text-white hover:text-sky-400 transition">HOME</a></li>
+          <li><a href="toys.html" class="text-xs font-bold text-white hover:text-sky-400 transition">MINI GAMES</a></li>
+          <li><a href="products.html" class="text-xs font-bold text-white hover:text-sky-400 transition">PRODUCTS</a></li>
+          <li><a href="contact.html" class="text-xs font-bold text-white hover:text-sky-400 transition">ORDER ONLINE</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="relative z-10 mt-28 mb-12 w-full max-w-7xl px-4 fade-in-scale">
+    <div class="bg-black/70 backdrop-blur-xl border border-white/20 p-6 md:p-10 rounded-[2.5rem] shadow-2xl">
+      
+      <div class="mb-10 text-center">
+        <h2 class="text-4xl font-black text-white uppercase tracking-widest">Checkout Details</h2>
+        <div class="h-1 w-24 bg-sky-500 mx-auto mt-4"></div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-10">
+        
+        <div class="lg:w-2/3">
+          <h3 class="text-white font-bold uppercase tracking-tighter mb-6 flex items-center gap-2">
+            <span class="w-2 h-6 bg-sky-500 rounded-full"></span> 1. Select Products
+          </h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <div class="flex items-center gap-4 bg-white/5 border border-white/10 p-3 rounded-2xl hover:border-sky-500/50 transition duration-300">
+              <div class="w-24 h-24 bg-gray-800 rounded-xl flex-shrink-0 overflow-hidden border border-white/10">
+                <img src="images/lynx.jpg" alt="Exhaust" class="w-full h-full object-cover">
+              </div>
+              <div class="flex-grow">
+                <h4 class="text-white font-bold text-sm uppercase leading-tight">BOM X LYNX</h4>
+                <p class="text-sky-400 text-xs font-black mt-1">₱6,500</p>
+                <button class="mt-2 bg-sky-600 hover:bg-sky-500 text-white px-4 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition">Add to Cart</button>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 bg-white/5 border border-white/10 p-3 rounded-2xl hover:border-sky-500/50 transition duration-300">
+              <div class="w-24 h-24 bg-gray-800 rounded-xl flex-shrink-0 overflow-hidden border border-white/10">
+                <img src="images/rearshock.jpg" alt="Shocks" class="w-full h-full object-cover">
+              </div>
+              <div class="flex-grow">
+                <h4 class="text-white font-bold text-sm uppercase leading-tight">PZTECH 330 MM</h4>
+                <p class="text-sky-400 text-xs font-black mt-1">₱ 4,500</p>
+                <button class="mt-2 bg-sky-600 hover:bg-sky-500 text-white px-4 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition">Add to Cart</button>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white/5 border border-white/10 p-3 rounded-2xl hover:border-sky-500/50 transition duration-300">
+              <div class="w-24 h-24 bg-gray-800 rounded-xl flex-shrink-0 overflow-hidden border border-white/10">
+                <img src="imageS/caliper.jpg" alt="Shocks" class="w-full h-full object-cover">
+              </div>
+              <div class="flex-grow">
+                <h4 class="text-white font-bold text-sm uppercase leading-tight">BREMBO CALIPER 4POT</h4>
+                <p class="text-sky-400 text-xs font-black mt-1">₱ 11,000</p>
+                <button class="mt-2 bg-sky-600 hover:bg-sky-500 text-white px-4 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition">Add to Cart</button>
+              </div>
+            </div>
+             <div class="flex items-center gap-4 bg-white/5 border border-white/10 p-3 rounded-2xl hover:border-sky-500/50 transition duration-300">
+              <div class="w-24 h-24 bg-gray-800 rounded-xl flex-shrink-0 overflow-hidden border border-white/10">
+                <img src="images/pipe.jpg" alt="Shocks" class="w-full h-full object-cover">
+              </div>
+              <div class="flex-grow">
+                <h4 class="text-white font-bold text-sm uppercase leading-tight">TRC Exhaust Pipe</h4>
+                <p class="text-sky-400 text-xs font-black mt-1">₱ 2,300</p>
+                <button class="mt-2 bg-sky-600 hover:bg-sky-500 text-white px-4 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition">Add to Cart</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 border-t lg:border-t-0 lg:border-l border-white/10 pt-10 lg:pt-0 lg:pl-10">
+          <h3 class="text-white font-bold uppercase tracking-tighter mb-6 flex items-center gap-2">
+            <span class="w-2 h-6 bg-yellow-500 rounded-full"></span> 2. Customer Info
+          </h3>
+          
+          <form class="space-y-4">
+            <div>
+              <label class="block text-gray-400 text-[10px] uppercase font-bold mb-1 ml-1">Full Name</label>
+              <input type="text" placeholder="Full Name" class="form-input w-full p-3 rounded-xl text-sm" required>
+            </div>
+            
+            <div>
+              <label class="block text-gray-400 text-[10px] uppercase font-bold mb-1 ml-1">Contact Number</label>
+              <input type="tel" placeholder="09XX XXX XXXX" class="form-input w-full p-3 rounded-xl text-sm" required>
+            </div>
+            
+            <div>
+              <label class="block text-gray-400 text-[10px] uppercase font-bold mb-1 ml-1">Delivery Address</label>
+              <textarea rows="3" placeholder="Street, City, Province" class="form-input w-full p-3 rounded-xl text-sm resize-none" required></textarea>
+            </div>
+
+            <div class="pt-4 border-t border-white/5 mt-6">
+              <div class="flex justify-between text-gray-400 text-xs mb-2">
+                <span>Subtotal:</span>
+                <span class="text-white">₱0.00</span>
+              </div>
+              <div class="flex justify-between text-white font-black text-lg mb-6">
+                <span>Total:</span>
+                <span class="text-sky-400">₱0.00</span>
+              </div>
+              
+              <button type="submit" class="w-full bg-white text-black font-black py-4 rounded-2xl hover:bg-sky-400 hover:text-white transition duration-300 uppercase text-xs tracking-widest shadow-xl">
+                Place Order Now
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
